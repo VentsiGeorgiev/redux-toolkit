@@ -21,7 +21,9 @@ function Posts() {
                     <h4>{post.title}</h4>
                     <p>{post.content}</p>
                     {/* {getUserName(post.authorId)} */}
-                    <PostAuthor userId={post.authorId} />
+                    <div>
+                        <PostAuthor userId={post.authorId} />
+                    </div>
                     <ReactionButtons post={post} />
                 </article>
             ))
@@ -30,7 +32,6 @@ function Posts() {
 
     return (
         <section>
-            <h3>Posts</h3>
             <PostForm />
             {renderPosts()}
         </section>

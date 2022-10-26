@@ -30,40 +30,44 @@ function PostForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor='title'>Post Title</label>
+        <form className='form' onSubmit={handleSubmit}>
+            <h3 className='title'>Add Post</h3>
+            <div className='form-row'>
+                <label className='label' htmlFor='title'>Post Title</label>
                 <input
                     name='title'
                     id='title'
                     type='text'
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
+                    className='form-input'
                 />
             </div>
-            <div>
-                <label htmlFor='author'>Author</label>
+            <div className='form-row'>
+                <label className='label' htmlFor='author'>Author</label>
                 <select
                     name='author'
                     id='author'
                     type='text'
                     value={authorId}
                     onChange={(e) => setAuthorId(e.target.value)}
+                    className='form-input'
                 >
                     {userOptions()}
                 </select>
             </div>
-            <div>
-                <label htmlFor='content'>Content</label>
+            <div className='form-row'>
+                <label className='label' htmlFor='content'>Content</label>
                 <textarea
                     name='content'
                     id='content'
                     type='text'
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
+                    className='form-input'
                 />
             </div>
-            <button>Save Post</button>
+            <button className='btn'>Save Post</button>
         </form>
     );
 }
