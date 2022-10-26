@@ -1,6 +1,10 @@
+import Posts from "./features/posts/Posts";
+
 function App() {
     return (
-        <section></section>
+        <main>
+            <Posts />
+        </main>
     );
 }
 
