@@ -3,6 +3,7 @@ import { selectAllUsers } from '../users/usersSlice';
 import PostAuthor from './PostAuthor';
 import PostForm from './PostForm';
 import { selectAllPosts } from './postsSlice';
+import ReactionButtons from './ReactionButtons';
 
 function Posts() {
     const posts = useSelector(selectAllPosts);
@@ -21,6 +22,7 @@ function Posts() {
                     <p>{post.content}</p>
                     {/* {getUserName(post.authorId)} */}
                     <PostAuthor userId={post.authorId} />
+                    <ReactionButtons post={post} />
                 </article>
             ))
         );

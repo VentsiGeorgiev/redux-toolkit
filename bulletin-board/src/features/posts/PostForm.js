@@ -55,7 +55,7 @@ function PostForm() {
             </div>
             <div>
                 <label htmlFor='content'>Content</label>
-                <input
+                <textarea
                     name='content'
                     id='content'
                     type='text'
