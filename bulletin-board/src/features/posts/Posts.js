@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import PostForm from './PostForm';
 import { selectAllPosts } from './postsSlice';
 
 function Posts() {
@@ -18,6 +19,7 @@ function Posts() {
     return (
         <section>
             <h3>Posts</h3>
+            <PostForm />
             {renderPosts()}
         </section>
     );
